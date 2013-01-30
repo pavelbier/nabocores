@@ -4,8 +4,7 @@ target.all = ->
 	target.install()
 
 target.require_init = (cb) ->
-	cd __dirname
-	cd '../build'
+	cd __dirname+'/../build'
 	cat('../components/requirejs/require.js','../components/jquery/jquery.js').to('../js/require-jquery.js')
 	exec 'node node_modules/requirejs/bin/r.js -o name=require-jquery out=../js/require-jquery-min.js baseUrl=../js/', ->
 		cb() if typeof cb=='function'
@@ -14,24 +13,20 @@ target.watch_less_init = ->
 	exec 'npm install -g watch-less',{async:true}
 
 target.watch_less = ->
-	cd __dirname
-	cd '../css'
+	cd __dirname+'/../css'
 	exec 'watch-less --e .css'
 
 target.watch_coffee = ->
-	cd __dirname
-	cd '../js'
-	exec 'coffee --watch --compile main.coffee'
+	cd __dirname+'/../js'
+	exec 'coffee --watch --compile .'
 
 target.compile_coffee = (cb) ->
-	cd __dirname
-	cd '../js'
+	cd __dirname+'/../js'
 	exec 'coffee --compile main.coffee', ->
 		cb() if typeof cb=='function'
 
 target.compile_less = (cb) ->
-	cd __dirname
-	cd '../css'
+	cd __dirname+'/../css'
 	exec 'lessc project.less project.css', ->
 		cb() if typeof cb=='function'
 

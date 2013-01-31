@@ -4,4 +4,4 @@ require.config
 
 require ['jquery'],($) ->
 	$ ->
-		console.log 'it works!',$
+		$('<h1>',{text: 'It Works!'}).appendTo($('body'))

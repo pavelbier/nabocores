@@ -6,7 +6,7 @@ target.all = ->
 target.require_init = (cb) ->
 	cd __dirname+'/../build'
 	cat('../components/requirejs/require.js','../components/jquery/jquery.js').to('../js/require-jquery.js')
-	exec 'node node_modules/requirejs/bin/r.js -o name=require-jquery out=../js/require-jquery-min.js baseUrl=../js/', ->
+	exec 'node ../components/r.js/index.js -o name=require-jquery out=../js/require-jquery-min.js baseUrl=../js/', ->
 		cb() if typeof cb=='function'
 
 target.watch_less_init = ->
@@ -33,19 +33,18 @@ target.compile_less = (cb) ->
 
 target.bundle = ->
 	cd __dirname
-	exec 'node node_modules/requirejs/bin/r.js -o app.build.js',{async:true}
-	exec 'node node_modules/requirejs/bin/r.js -o cssIn=../css/main.css out=../css/main-min.css',{async:true}
+	exec 'node ../components/r.js/index.js -o app.build.js',{async:true}
+	exec 'node ../components/r.js/index.js -o cssIn=../css/main.css out=../css/main-min.css',{async:true}
 
 target.install = ->
 	if not which 'git'
 	  echo 'Sorry, this script requires git'
 	  exit 1
 
-	exec 'npm install -g bower less watch-less', ->
+	exec 'npm install -g bower requirejs less watch-less', ->
 		cd __dirname
 		exec 'bower install', ->
 			target.compile_coffee ->
 				target.compile_less ->
 					cd __dirname
-					exec 'npm install requirejs', ->
-						target.require_init(target.bundle)
+					target.require_init(target.bundle)

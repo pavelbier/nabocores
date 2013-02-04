@@ -33,7 +33,7 @@ target.compile_less = (cb) ->
 
 target.bundle = ->
 	cd __dirname
-	exec 'node ../components/r.js/index.js -o app.build.js',{async:true}
+	exec 'node ../components/r.js/index.js -o main.build.js',{async:true}
 	exec 'node ../components/r.js/index.js -o cssIn=../css/main.css out=../css/main-min.css',{async:true}
 
 target.install = ->

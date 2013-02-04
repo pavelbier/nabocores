@@ -4,9 +4,9 @@ target.all = ->
 	target.install()
 
 target.require_init = (cb) ->
-	cd __dirname+'/../build'
-	cat('../components/requirejs/require.js','../components/jquery/jquery.js').to('../js/require-jquery.js')
-	exec 'node ../components/r.js/index.js -o name=require-jquery out=../js/require-jquery-min.js baseUrl=../js/', ->
+	cd __dirname
+	cp '../components/requirejs/require.js','../js/require.js'
+	exec 'node ../components/r.js/index.js -o name=../js/require out=../js/require-min.js baseUrl=../js/', ->
 		cb() if typeof cb=='function'
 
 target.watch_less_init = ->

@@ -1,6 +1,7 @@
 require.config
   paths: 
     'jquery' : '../components/jquery/jquery'
+    'text' : '../components/requirejs-text/text'
 
 require ['jquery'],($) ->
 	$ ->

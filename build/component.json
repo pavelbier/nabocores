@@ -8,6 +8,8 @@
     "requirejs-text":null,
     "r.js":"https://raw.github.com/jrburke/r.js/master/dist/r.js",
     "normalize-css": null,
-    "lesshat" : "git://github.com/CSSHat/LESSHat.git"
+    "lesshat" : "git://github.com/CSSHat/LESSHat.git",
+    "backbone": null,
+    "underscore": null
   }
 }

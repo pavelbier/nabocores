@@ -23,3 +23,5 @@ Dependencies
 - less
 - lesshat
 - watch-less
+- backbone
+- underscore

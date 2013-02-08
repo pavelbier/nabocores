@@ -5,8 +5,7 @@ target.all = ->
 
 target.require_init = (cb) ->
 	cd __dirname
-	rm '../js/require.js'
-	cp '../components/requirejs/require.js','../js/require.js'
+	cp '-f','../components/requirejs/require.js','../js/require.js'
 	exec 'node ../components/r.js/index.js -o name=../js/require out=../js/require-min.js baseUrl=../js/', ->
 		cb() if typeof cb=='function'
 

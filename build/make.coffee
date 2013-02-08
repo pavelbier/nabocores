@@ -41,10 +41,13 @@ target.install = ->
 	  echo 'Sorry, this script requires git'
 	  exit 1
 
-	exec 'npm install -g bower requirejs less watch-less', ->
-		cd __dirname
-		exec 'bower install', ->
-			target.compile_coffee ->
-				target.compile_less ->
-					cd __dirname
-					target.require_init(target.bundle)
+	cd __dirname
+	exec 'npm install -g bower requirejs less watch-less', target.update
+
+target.update = ->
+	cd __dirname
+	exec 'bower install', ->
+		target.compile_coffee ->
+			target.compile_less ->
+				cd __dirname
+				target.require_init target.bundle

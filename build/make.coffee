@@ -31,11 +31,20 @@ target.compile_less = (cb) ->
 	exec 'lessc project.less project.css', ->
 		cb() if typeof cb=='function'
 
-
 target.bundle = ->
 	cd __dirname
 	exec 'node ../components/r.js/index.js -o main.build.js',{async:true}
 	exec 'node ../components/r.js/index.js -o cssIn=../css/main.css out=../css/main-min.css',{async:true}
+
+target.compile_init = ->
+	target.compile_coffee ->
+		target.compile_less ->
+			cd __dirname
+			target.require_init target.bundle
+
+target.update = ->
+	cd __dirname
+	exec 'bower install', target.compile_init
 
 target.install = ->
 	if not which 'git'
@@ -44,11 +53,3 @@ target.install = ->
 
 	cd __dirname
 	exec 'npm install -g bower requirejs less', target.update
-
-target.update = ->
-	cd __dirname
-	exec 'bower install', ->
-		target.compile_coffee ->
-			target.compile_less ->
-				cd __dirname
-				target.require_init target.bundle

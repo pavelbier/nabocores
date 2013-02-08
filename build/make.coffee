@@ -42,7 +42,7 @@ target.install = ->
 	  exit 1
 
 	cd __dirname
-	exec 'npm install -g bower requirejs less watch-less', target.update
+	exec 'npm install -g bower requirejs less', target.update
 
 target.update = ->
 	cd __dirname

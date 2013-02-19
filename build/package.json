@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/pavelbier/nabocores/issues"
   },
-  "main": "Gruntfile.js",
+  "main": "Gruntfile.coffee",
   "engines": {
     "node": ">= 0.8.0"
   },

@@ -9,6 +9,9 @@ module.exports = (grunt) ->
     qunit:       
       files: ['../test/**/*.html']    
     watch:
+      coffee_gruntfile:
+        files: ['Gruntfile.coffee']
+        tasks: ['compile']      
       coffee_main:
         files: ['../js/main.coffee'],
         tasks: ['coffee:main','jshint:main','bundle:js']

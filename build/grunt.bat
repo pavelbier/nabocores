@@ -1,0 +1,1 @@
+@CALL grunt.cmd %*

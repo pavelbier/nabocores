@@ -5,15 +5,14 @@ Nabocores - HTML5 dev skeleton with jquery, requirejs, less, coffee-script, shjs
 
 2.) Clone this repository
 
-3.) Install shelljs and coffee script - `npm install -g shelljs coffee-script`
+3.) Install dependencies (from build directory) - `install.bat` or `install.sh`
 
-4.) Install dependencies (from build directory) - `shjs make install`
-
-5.) Call watchers or bundle (from build directory) - `shjs make watch_less` or `shjs make watch_coffee` or `shjs make bundle`
+4.) Call watch (from build directory) - `watch.bat` or `watch.sh`
 
 Dependencies
 ============
 - nodejs
+- grunt
 - bower
 - shelljs
 - coffe-script
@@ -22,6 +21,5 @@ Dependencies
 - normalize
 - less
 - lesshat
-- watch-less
 - backbone
 - underscore

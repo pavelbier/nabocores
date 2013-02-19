@@ -1,7 +1,7 @@
 {
   "name": "HTML5 skeleton with jQuery, RequireJS, Backbone, Underscore, Less and Coffee",
   "author" : "Pavel Bier",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "jquery": "1.8.2",
     "requirejs": null,
@@ -9,6 +9,7 @@
     "r.js":"https://raw.github.com/jrburke/r.js/master/dist/r.js",
     "normalize-css": null,
     "lesshat" : "git://github.com/CSSHat/LESSHat.git",
+    "qunit":null,
     "backbone": null,
     "underscore": null
   }

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-shjs make bundle
+grunt bundle

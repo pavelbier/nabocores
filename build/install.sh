@@ -1,4 +1,5 @@
 #!/bin/sh
 
-npm install -g shelljs coffee-script
-shjs make install
+npm install -g grunt-cli
+npm install
+grunt install

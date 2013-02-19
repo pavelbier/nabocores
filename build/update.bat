@@ -1,2 +1,2 @@
 @ECHO OFF
-CALL shjs make update
+CALL grunt update

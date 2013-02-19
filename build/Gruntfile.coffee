@@ -99,7 +99,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'install',"install node dependencies",->
     shell.cd __dirname
-    shell.exec 'npm install -g bower requirejs'
+    shell.exec 'npm install -g bower requirejs coffee-script less'
     grunt.task.run 'update'
 
   grunt.registerTask 'update',"update front dependencies",->

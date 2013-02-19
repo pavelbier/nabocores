@@ -1,5 +1,5 @@
-Nabocores - HTML5 dev skeleton with jquery, requirejs, less, coffee-script, shjs and bower
-==========================================================================================
+Nabocores - HTML5 dev skeleton with jquery, requirejs, less, coffee-script, shelljs, gruntjs and bower
+======================================================================================================
 
 1.) Download [nodejs](http://nodejs.org/)
 

@@ -24,6 +24,9 @@ module.exports = (grunt) ->
       less:
         files: ['../**/*.less'],
         tasks: ['less','bundle:css']
+      css_main:
+        files: ['../css/main.css'],
+        tasks: ['bundle:css']
     less: 
       css:
         src: ['../css/project.less']

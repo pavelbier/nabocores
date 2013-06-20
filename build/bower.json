@@ -4,13 +4,13 @@
   "version": "0.0.4",
   "dependencies": {
     "jquery": "1.8.2",
-    "requirejs": null,
-    "requirejs-text":null,
+    "requirejs": "latest",
+    "requirejs-text":"latest",
     "r.js":"https://raw.github.com/jrburke/r.js/master/dist/r.js",
-    "normalize-css": null,
+    "normalize-css": "latest",
     "lesshat" : "git://github.com/CSSHat/LESSHat.git",
-    "qunit":null,
-    "backbone": null,
-    "underscore": null
+    "qunit":"latest",
+    "backbone": "latest",
+    "underscore": "latest"
   }
 }

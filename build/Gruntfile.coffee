@@ -27,6 +27,10 @@ module.exports = (grunt) ->
       css_main:
         files: ['../css/main.css'],
         tasks: ['bundle:css']
+    autoprefixer: 
+      dist:
+        files:
+          '../css/project.css': '../css/project.css'
     less: 
       css:
         src: ['../css/project.less']
@@ -85,6 +89,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
 
   grunt.registerTask 'requireinit',"download requirejs and minify",->
     shell.cd __dirname
@@ -97,6 +102,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'bundle:css',"bundle main.css file",->
     shell.cd __dirname
+    grunt.task.run 'autoprefixer'
     shell.exec 'node ../components/r.js/index.js -o cssIn=../css/main.css out=../css/main-min.css',{async: true}
 
   grunt.registerTask 'bundle',["bundle:js","bundle:css"]

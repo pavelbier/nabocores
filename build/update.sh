@@ -1,3 +1,3 @@
 #!/bin/sh
 
-grunt update
+gulp update

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-grunt bundle
+gulp bundle

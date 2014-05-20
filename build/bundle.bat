@@ -1,2 +1,2 @@
 @ECHO OFF
-CALL grunt bundle
+CALL gulp bundle

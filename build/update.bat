@@ -1,2 +1,2 @@
 @ECHO OFF
-CALL grunt update
+CALL gulp update

@@ -1,2 +1,2 @@
 @ECHO OFF
-CALL grunt watch
+CALL gulp watch

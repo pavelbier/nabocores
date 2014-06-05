@@ -1,7 +1,7 @@
 {
   "name": "nabocores",
   "description": "HTML5 skeleton with jQuery, RequireJS, Backbone, Underscore, Less and Coffee",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/pavelbier/nabocores",
   "author": {
     "name": "Pavel Bier",
@@ -25,7 +25,6 @@
   "dependencies": {},
   "devDependencies": {
     "coffee-script" : "*",
-    "gulp" : "*",
     "bower" : "*",
     "gulp-jshint": "*",
     "gulp-nodeunit": "*",

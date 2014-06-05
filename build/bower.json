@@ -8,7 +8,7 @@
     "requirejs-text":"latest",
     "r.js":"https://raw.github.com/jrburke/r.js/master/dist/r.js",
     "normalize-css": "latest",
-    "lesshat" : "https://github.com/csshat/lesshat.git",
+    "lesshat" : "git://github.com/csshat/lesshat.git",
     "qunit":"latest",
     "backbone": "latest",
     "underscore": "latest"
